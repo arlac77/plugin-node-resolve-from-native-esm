@@ -1,0 +1,10 @@
+{
+  "name": "plugin-node-resolve-default-export-problem",
+  "scripts": {
+    "prepare": "rollup -c rollup.config.mjs"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "rollup": "^2.10.8"
+  }
+}
