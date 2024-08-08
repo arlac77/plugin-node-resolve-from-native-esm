@@ -13,7 +13,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '${{ matrix.node-version }}'
-      - run: npm ci
       - run: npm run cover --if-present
   release:
     needs:
@@ -24,7 +23,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 18.18.2
-      - run: npm ci
       - run: npx semantic-release
         env:
           CI: 'true'
