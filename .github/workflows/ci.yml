@@ -23,7 +23,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 18.18.2
-      - run: npx semantic-release
+      - name: release
+        run: npx semantic-release
         env:
           CI: 'true'
           NPM_TOKEN: '${{ secrets.NPM_TOKEN }}'
